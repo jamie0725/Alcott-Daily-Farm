@@ -168,6 +168,22 @@ INSERT INTO Staff (staffName, salary, job, mpcState)
 INSERT INTO Staff (staffName, salary, job, skill, mpcState)
 		VALUE('Lloyd Garrison', '1800', 'Stableboy', 'milking parlor certificate', 'Y');
         
-INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaff)
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
 		VALUE('Jo', 70, '2011-04-02 07:20:00', 11.35, 910.27, 1, 'Bronson Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Jo', 71, '2011-04-02 07:30:00', 10.77, 838.983, 1, 'Bronson Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Meg', 42, '2011-04-02 07:40:00', 12.30, 858.54, 1, 'Bronson Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Meg', 30, '2011-04-02 07:20:00', 10.50, 892.5, 2, 'William Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Jo', 70, '2011-04-02 19:40:00', 11.10, 886.89, 1, 'William Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Jo', 71, '2011-04-02 19:40:00', 10.88, 848.64, 2, 'Bronson Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Meg', 42, '2011-04-02 19:50:00', 12.50, 843.75, 1, 'William Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Meg', 30, '2011-04-02 19:50:00', 10.23, 879.78, 2, 'Bronson Alcott');
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaffName)
+		VALUE('Jo', 70, '2011-04-03 07:20:00', 11.40, 889.2, 1, 'Bronson Alcott');
         
