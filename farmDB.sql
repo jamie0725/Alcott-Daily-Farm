@@ -6,7 +6,7 @@ CREATE TABLE Cattle (
 	Prefix               VARCHAR(20)     NOT NULL,
     Suffix               INT             NOT NULL,
     EarTag               CHAR(7)         NOT NULL    UNIQUE,
-    Gender               CHAR(1)         NOT NULL    CHECK(Cattle in ('B','C')),
+    Gender               CHAR(1)         NOT NULL    CHECK(Gender in ('B','C')),
     Comments             VARCHAR(1000),
     mPrefix              VARCHAR(20),
     fPrefix              VARCHAR(20),
@@ -23,8 +23,8 @@ CREATE TABLE Cow (
 	cowPrefix            VARCHAR(20)     NOT NULL,
     cowSuffix            INT             NOT NULL,
     calveNr              INT,
-    inseminationState    CHAR(1)         CHECK(Cow in ('Y','N')),
-    medicineState        CHAR(1)         CHECK(Cow in ('Y','N')),
+    inseminationState    CHAR(1)         CHECK(inseminationState in ('Y','N')),
+    medicineState        CHAR(1)         CHECK(medicineState in ('Y','N')),
     PRIMARY KEY (cowPrefix, cowSuffix)
     );
     
@@ -48,7 +48,7 @@ CREATE TABLE Staff (
     job                  VARCHAR(20)        NOT NULL,
     skill                VARCHAR(20),
 	salary               DECIMAL(7,2)       NOT NULL,
-    mpcState             CHAR(1)            NOT NULL        CHECK(STAFF in ('Y','N')),
+    mpcState             CHAR(1)            NOT NULL        CHECK(mpcState in ('Y','N')),
     PRIMARY KEY (staffName)
     );
     
