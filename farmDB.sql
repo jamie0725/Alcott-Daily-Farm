@@ -3,11 +3,11 @@ CREATE DATABASE farmDB;
 USE farmDB;
 
 CREATE TABLE Cattle (
-	Prefix               VARCHAR(20)     NOT NULL,
-    Suffix               INT             NOT NULL,
-    EarTag               CHAR(7)         NOT NULL    UNIQUE,
-    Gender               CHAR(1)         NOT NULL    CHECK(Gender in ('B','C')),
-    Comments             VARCHAR(1000),
+	prefix               VARCHAR(20)     NOT NULL,
+    suffix               INT             NOT NULL,
+    earTag               CHAR(7)         NOT NULL    UNIQUE,
+    gender               CHAR(1)         NOT NULL    CHECK(Gender in ('B','C')),
+    comments             VARCHAR(1000),
     mPrefix              VARCHAR(20),
     fPrefix              VARCHAR(20),
     mSuffix              INT,
@@ -20,8 +20,8 @@ CREATE TABLE Cattle (
     );
     
 CREATE TABLE Cow (
-	cowPrefix            VARCHAR(20)     NOT NULL,
-    cowSuffix            INT             NOT NULL,
+	cowPrefix            VARCHAR(20)     NOT NULL references Cattle,
+    cowSuffix            INT             NOT NULL references Cattle,
     calveNr              INT,
     inseminationState    CHAR(1)         CHECK(inseminationState in ('Y','N')),
     medicineState        CHAR(1)         CHECK(medicineState in ('Y','N')),
@@ -29,8 +29,8 @@ CREATE TABLE Cow (
     );
     
 CREATE TABLE BullInShed (
-	bullPrefix           VARCHAR(20)     NOT NULL,
-    bullSuffix           INT             NOT NULL,
+	bullPrefix           VARCHAR(20)     NOT NULL references Cattle,
+    bullSuffix           INT             NOT NULL references Cattle,
     PRIMARY KEY (bullPrefix, bullSuffix)
     );
     
