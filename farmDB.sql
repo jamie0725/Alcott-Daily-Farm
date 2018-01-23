@@ -168,5 +168,6 @@ INSERT INTO Staff (staffName, salary, job, mpcState)
 INSERT INTO Staff (staffName, salary, job, skill, mpcState)
 		VALUE('Lloyd Garrison', '1800', 'Stableboy', 'milking parlor certificate', 'Y');
         
-INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, lipitidy, parlorNr, mpcStaff)
-		VALUE('Jo', 70, '2011-04-02-
+INSERT INTO Milk (cowPrefix, cowSuffix, productDate, volume, fat, parlorNr, mpcStaff)
+		VALUE('Jo', 70, '2011-04-02 07:20:00', 11.35, 910.27, 1, 'Bronson Alcott');
+        
