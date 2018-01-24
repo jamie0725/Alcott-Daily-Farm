@@ -5,7 +5,7 @@ USE farmDB;
 CREATE TABLE Cattle (
 	prefix               VARCHAR(255)      NOT NULL,
     suffix               INT               NOT NULL,
-    earTag               VARCHAR(255)      NOT NULL,
+    earTag               VARCHAR(255),
     gender               ENUM('C','B')     NOT NULL,
     comments             TEXT,
     motherPrefix         VARCHAR(255),
