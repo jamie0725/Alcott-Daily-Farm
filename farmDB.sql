@@ -138,20 +138,33 @@ INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate)
 		VALUE('Fritz', 15, '699-142', 'B', '2008-03-26');
 INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, soldDate, comments)
 		VALUE('Fritz', 16, '699-143', 'B', '2008-03-26', '2008-04-14', 'Missing front right leg');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, comments)
-		VALUE('Jo', 70, '699-181', 'C', '2009-06-15', 'Received 1 dose of antibiotics per day from April 5, 2010 until April 26, 2010');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate)
-		VALUE('Jo', 71, '699-182', 'C', '2009-06-15');
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix, comments)
+		VALUE('Jo', 70, '699-181', 'C', '2009-06-15', 'Jo', 52, 'Fritz', 15, 'Received 1 dose of antibiotics per day from April 5, 2010 until April 26, 2010');
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Jo', 71, '699-182', 'C', '2009-06-15', 'Jo', 52, 'Fritz', 15);
 INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, boughtDate, Comments)
 		VALUE('John', 1, '699-183', 'B', '2009-07-02', '2010-07-10',  'Acquired on July 10, 2010');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate)
-		VALUE('Fritz', 17, '699-205', 'B', '2010-07-16');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate)
-		VALUE('Meg', 42, '699-184', 'C', '2009-09-05');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, soldDate)
-		VALUE('Fritz', 19, '699-185', 'B', '2009-09-05', '2009-10-05');
-INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, deathDate, comments)
-		VALUE('Meg', 46, '699-186', 'C', '2010-10-10', '2010-10-17', 'Died of illness on October 17');
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Fritz', 17, '699-205', 'B', '2010-07-16', 'Jo', 52, 'Fritz', 15);
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Meg', 42, '699-184', 'C', '2009-09-05', 'Meg', 30, 'Fritz', 15);
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, soldDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Fritz', 19, '699-185', 'B', '2009-09-05', '2009-10-05', 'Meg', 30, 'Fritz', 15);
+INSERT INTO Cattle (prefix, suffix, earTag, gender, birthDate, deathDate, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix, comments)
+		VALUE('Meg', 46, '699-186', 'C', '2010-10-10', '2010-10-17', 'Meg', 30, 'Fritz', 15, 'Died of illness on October 17');
+-- Here are cattles that is not listed officially in the chat, but in the pedigree.
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Jo', 84, 'C', 'Jo', 70, 'John', 1);
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('John', 2, 'B', 'Jo', 71, 'John', 1);
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Meg', 52, 'C', 'Meg', 42, 'Fritz', 17);
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Fritz', 23, 'B', 'Meg', 42, 'Fritz', 17);
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Fritz', 24, 'B', 'Meg', 42, 'Fritz', 17);
+INSERT INTO Cattle (prefix, suffix, gender, motherPrefix, motherSuffix, fatherPrefix, fatherSuffix)
+		VALUE('Fritz', 25, 'B', 'Jo', 71, 'Fritz', 23);
 
 INSERT INTO Staff (staffName, salary, job, skill, mpcState)
 		VALUE('Bronson Alcott', '2400', 'Manager', 'MSc. Agricultural engineering, tractor license, milking parlor certificate', 'Y');
